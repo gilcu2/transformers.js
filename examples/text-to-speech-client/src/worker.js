@@ -1,5 +1,5 @@
 
-import { env, Tensor, AutoTokenizer, SpeechT5ForTextToSpeech, SpeechT5HifiGan } from '@xenova/transformers';
+import { env, Tensor, AutoTokenizer, SpeechT5ForTextToSpeech, SpeechT5HifiGan } from '@huggingface/transformers';
 import { encodeWAV } from './utils';
 
 // Disable local model checks
@@ -12,6 +12,7 @@ class MyTextToSpeechPipeline {
     static BASE_URL = 'https://huggingface.co/datasets/Xenova/cmu-arctic-xvectors-extracted/resolve/main/';
 
     static model_id = 'Xenova/speecht5_tts';
+    // static model_id = 'Xenova/mms-tts-deu';
     static vocoder_id = 'Xenova/speecht5_hifigan';
 
     static tokenizer_instance = null;
